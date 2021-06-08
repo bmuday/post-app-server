@@ -1,10 +1,11 @@
 const express = require("express");
+const app = express();
+
 const logger = require("morgan");
 const dotenv = require("dotenv").config();
-/* const cors = require("cors"); */
 
-const app = express();
 const PORT = process.env.PORT || 5000;
+/* const cors = require("cors"); */
 
 // CORS
 /* app.use(cors()); */
