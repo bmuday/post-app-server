@@ -4,7 +4,7 @@
   "description": "Share your content here!",
   "main": "server.js",
   "scripts": {
-    "start": "npm install && node server.js",
+    "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "keywords": [],
