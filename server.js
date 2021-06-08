@@ -21,7 +21,7 @@ app.use(logger("combined"));
 // CORS
 app.use(cors());
 
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Headers",
@@ -32,7 +32,7 @@ app.use((req, res, next) => {
     "GET, POST, PUT, DELETE, PATCH, OPTIONS"
   );
   next();
-});
+}); */
 
 // For deployment
 // process.env.PORT
