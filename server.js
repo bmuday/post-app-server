@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 5000;
 // CORS
 /* app.use(cors()); */
 app.use((req, res, next) => {
+  res.setHeader("Content-Type", "application/json");
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Headers",
