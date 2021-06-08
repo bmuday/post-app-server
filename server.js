@@ -38,12 +38,12 @@ app.use(cors());
 // process.env.PORT
 // process.env.NODE_ENV => production or undefined
 
-/* // Heroku deployment test
+// Heroku deployment test
 app.get("/", (req, res) => {
   res.json({
     message: "Hello World!",
   });
-}); */
+});
 
 // Routes middlewares
 const routes = require("./routes/api");
