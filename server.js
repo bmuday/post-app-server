@@ -5,11 +5,11 @@ const logger = require("morgan");
 const dotenv = require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
-/* const cors = require("cors"); */
+const cors = require("cors");
 
 // CORS
-/* app.use(cors()); */
-app.use((req, res, next) => {
+app.use(cors());
+/* app.use((req, res, next) => {
   res.setHeader("Content-Type", "application/json");
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -21,7 +21,7 @@ app.use((req, res, next) => {
     "GET, POST, PUT, DELETE, PATCH, OPTIONS"
   );
   next();
-});
+}); */
 
 // Database Connection
 const db = require("./db");
