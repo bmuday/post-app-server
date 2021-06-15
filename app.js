@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: false }));
 // HTTP Request Logger
 app.use(logger("combined"));
 
-// Heroku deployment test
+// Deployment test
 app.get("/", (req, res) => {
   res.json({
     message: "Hello World!",

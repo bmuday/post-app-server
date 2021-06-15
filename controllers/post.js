@@ -11,7 +11,6 @@ exports.getPosts = (req, res) => {
 };
 
 exports.createPost = (req, res) => {
-  //console.log(`Body: ${req.body}`);
   const data = req.body;
   const newPost = new Post(data);
 
