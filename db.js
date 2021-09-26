@@ -1,15 +1,17 @@
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-
+require("dotenv").config();
 const { username, password, database } = process.env;
 
 // DB connection
 const MONGODB_URI = `mongodb+srv://${username}:${password}@cluster0.nnbxv.mongodb.net/${database}?retryWrites=true&w=majority`;
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+const db = mongoose
+  .connect(MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Mongoose is connected!!!");
+  })
+  .catch((err) => console.error(err));
 
-mongoose.connection.on("connected", () => {
-  console.log("Mongoose is connected!!!");
-});
+module.exports = db;
